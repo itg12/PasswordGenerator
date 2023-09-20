@@ -7,9 +7,13 @@ const passwordGenerator=()=>{
     let str = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxys"
     if(allow_Number==true){
         str+= "0123456789"
+    }else{
+        allow_Number = false
     }
     if(allow_char==true){
         str+= "@!~$#%^&(}[)[}/"
+    }else{
+        allow_Car = false
     }
 
     //let FinalPass = ""
