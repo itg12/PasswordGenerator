@@ -1,19 +1,17 @@
-let allow_Number = false;
-let allow_char = false
+
 let length=8
 
 const passwordGenerator=()=>{
+    let allow_Number = document.getElementById('num');
+    let allow_char = document.getElementById('char')
+
     let MyPass = ""
     let str = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxys"
-    if(allow_Number==true){
+    if(allow_Number.checked){
         str+= "0123456789"
-    }else{
-        allow_Number = false
     }
-    if(allow_char==true){
+    if(allow_char.checked){
         str+= "@!~$#%^&(}[)[}/"
-    }else{
-        allow_Car = false
     }
 
     //let FinalPass = ""
@@ -33,26 +31,6 @@ let changeLength=(val)=>{
     length = val
     passwordGenerator()
 }
-
-
-
-const allowNum=()=>{
-    let allow = document.getElementById('num')
-    if(allow.checked){
-        allow_Number = true;
-    }
-    passwordGenerator()
-}
-
-
-const allowChar=()=>{
-    let allow = document.getElementById('char')
-    if(allow.checked){
-        allow_char = true;
-    }
-    passwordGenerator()
-}
-
 
 const copyPassword=()=>{
     var text = document.getElementById('showPass');
