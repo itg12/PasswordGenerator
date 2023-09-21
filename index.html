@@ -9,7 +9,7 @@
 <body class="justify-center flex items-center h-screen" onload="passwordGenerator()" style="background-image: url(https://images.pexels.com/photos/1036808/pexels-photo-1036808.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1); background-size:cover; background-repeat: no-repeat; background-position: center; ;">
     <div>
         <div class="w-[300px] rounded-md border m-3 text-center bg-white shadow-2xl">
-            <h1 class="inline-flex items-center text-lg font-semibold px-4 py-2">
+            <h1 class="inline-flex items-center text-lg font-md px-4 py-2">
                 Password Generator
               </h1>
             <input
@@ -29,8 +29,8 @@
                 <input type="range" min="8" max="100" oninput="changeLength(this.value)" id="rangeDecider"><lavel class="font-semibold px-2" id="lenDisplay"></lavel>
               </div>
               <div class="mt-4">
-                <input type="checkbox" id="num" value="num" onclick="allowNum()"><lavel class="font-semibold px-2">Numbers</lavel>
-                <input type="checkbox" id="char" value="char" onclick="allowChar()"><lavel class="font-semibold px-2">Characters</lavel>
+                <input type="checkbox" id="num" onclick="passwordGenerator()"><lavel class="font-semibold px-2">Numbers</lavel>
+                <input type="checkbox" id="char" onclick="passwordGenerator()"><lavel class="font-semibold px-2">Characters</lavel>
               </div>
               <button
                 type="button"
